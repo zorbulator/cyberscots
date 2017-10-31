@@ -61,6 +61,11 @@ p {
   background-size: 5vh 5vh;
   position: relative;
 }
+
+.zOver {
+  z-index: 10;
+}
+
 .divider {
   height: 30%;
   background-color: #FFFFFF;
@@ -84,9 +89,10 @@ ul {
     margin-left: -5px;
     font-family: 'Roboto Condensed', sans-serif;
     z-index: 1;
-    width: 40%;
     transition: 0.5s;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    float: left;
+    width: auto;
 }
 
 li {
@@ -150,6 +156,17 @@ li a:hover {
   max-width: 25%;
   position: fixed;
 }
+
+img.white {
+  width: auto;
+  height: auto;
+  max-width: 50vw;
+  max-height: auto;
+  min-width: 50vw;
+  min-height: auto;
+}
+
+
 .hyperlink {
   font-size: 5vh;
   color: #32b4ff;

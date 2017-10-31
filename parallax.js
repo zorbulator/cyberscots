@@ -4,6 +4,7 @@ var top = 0;
 for (i=0;i<document.getElementsByClassName("white").length;i++) {
   document.getElementsByClassName("white")[i].style.marginTop = window.innerHeight*(0.3) + "px"; // 30% from top
 }
+//document.getElementsByClassName('parallax')[1].style.zIndex = "10";
 window.onscroll = function() {scroll()};
 function scroll(){
   for (i=0;i<document.getElementsByClassName("parallax").length;i++) {
@@ -23,9 +24,9 @@ function scroll(){
       scrollAmount = 0.2;
     }
     topOffset = document.getElementsByClassName("white")[i].parentElement.offsetTop; //parent div's offset from top of page
-    document.getElementsByClassName("white")[i].style.top = 0//(scrollAmount*(window.scrollY - topOffset) + (topOffset - window.scrollY)) + "px"; // way too long, only thing that worked
+    document.getElementsByClassName("white")[i].style.top = (Math.max(scrollAmount*(window.scrollY - topOffset), -window.innerHeight/2) + (topOffset - window.scrollY)) + "px"; // way too long, only thing that worked
     document.getElementsByClassName("white")[i].style.boxShadow = "-2vh " + ((scrollAmount*(window.scrollY))/5) + "px 10px rgba(0, 0, 0, 0.7)";
-    document.getElementsByClassName("white")[i].style.textShadow = "-1vh " + ((scrollAmount*(window.scrollY))/15) + "px 5px rgba(0, 0, 0, 0.3)";
+    document.getElementsByClassName("white")[i].style.textShadow = "-1vh " + ((scrollAmount*(window.scrollY))/20) + "px 5px rgba(0, 0, 0, 0.3)";
     //alert(document.getElementsByClassName("white")[i].style.boxShadow);
   }
 };
