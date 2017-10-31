@@ -18,6 +18,7 @@
   /*background-color: white;*/
   top: 0%;
   text-align: center;
+  z-index: 9999;
 }
 /*
 html, body{
@@ -57,11 +58,8 @@ p {
   height:100%;
   transition: 0.05s;
   text-align: center;
-  background-size: fit;
-  -webkit-background-size: fit;
-  -moz-background-size: fit;
-  -o-background-size: fit;
-  text-align: center;
+  background-size: 5vh 5vh;
+  position: relative;
 }
 .divider {
   height: 30%;
@@ -70,8 +68,9 @@ p {
   flex-direction: column;  /* make main axis vertical */
   justify-content: center; /* center items vertically, in this case */
   align-items: center;     /* center items horizontally, in this case */
-  z-index: 9999;
+  z-index: 999;
   transition: 1s;
+  position: relative;
 }
 
 ul {
@@ -80,13 +79,14 @@ ul {
     margin-bottom: 0%;
     padding: 1vh 1vh;
     overflow: hidden;
-    background-color: rgba(40,40,40,0.4);
+    background-color: white;/*rgba(40,40,40,0.4)*/
     border-radius: 5px;
     margin-left: -5px;
     font-family: 'Roboto Condensed', sans-serif;
-    z-index: 9999;
+    z-index: 1;
     width: 40%;
     transition: 0.5s;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 li {
@@ -104,13 +104,16 @@ li a {
     text-decoration: none;
     font-size: 4vh;
     font-family: 'Roboto Condensed', sans-serif;
-    transition: 0.5s;
-    z-index: 9999;
+    transition: 0.2s;
+    z-index: 1;
     border-radius: 4px;
 }
 
 li a:hover {
-    background-color: rgba(0,0,0,0.5);
+    /*background-color: rgba(0,0,0,0.5);*/
+    -moz-box-shadow:    inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow:         inset 0 0 10px #000000;
 }
 
 /*img {
@@ -141,23 +144,24 @@ li a:hover {
   box-shadow: -2vh 10px 10px rgba(0, 0, 0, 0.7);
   font-family: 'Roboto Condensed', sans-serif;
   display: inline-block;
-  z-index: 0;
+  z-index: 10;
   transition: 0.05s;
   text-shadow: -1vh 0px 5px rgba(0,0,0,0.3);
-  max-width: 30%;
+  max-width: 25%;
+  position: fixed;
 }
 .hyperlink {
   font-size: 5vh;
   color: #32b4ff;
-}/*
+}
 .center {
-  float: center;
-}*/
+  margin: 15% auto; /* Will not center vertically and won't work in IE6/7. */
+  left: 0;
+  right: 0;
+}
 .left {
-  float: left;
-  margin-left: 15vh;
+  left: 5%;
 }
 .right {
-  float: right;
-  margin-right: 15vh;
+ right: 5%;
 }

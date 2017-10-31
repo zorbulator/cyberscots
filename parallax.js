@@ -1,5 +1,6 @@
 var scrollAmount = 0.2;
 var topOffset = 0;
+var top = 0;
 for (i=0;i<document.getElementsByClassName("white").length;i++) {
   document.getElementsByClassName("white")[i].style.marginTop = window.innerHeight*(0.3) + "px"; // 30% from top
 }
@@ -15,16 +16,18 @@ function scroll(){
     }else if (document.getElementsByClassName("white")[i].className.split(' ')[1] == "farFront") {
       scrollAmount = 0.5;
     }else if (document.getElementsByClassName("white")[i].className.split(' ')[1] == "back") {
-      scrollAmount = -0.2
+      scrollAmount = -0.2;
+    }else if (document.getElementsByClassName("white")[i].className.split(' ')[1] == "test") {
+      scrollAmount = 1;
     }else {
       scrollAmount = 0.2;
     }
     topOffset = document.getElementsByClassName("white")[i].parentElement.offsetTop; //parent div's offset from top of page
-    document.getElementsByClassName("white")[i].style.marginTop = scrollAmount*window.scrollY + window.innerHeight*(0.3) - topOffset*0.3 + "px";
+    document.getElementsByClassName("white")[i].style.top = (scrollAmount*(window.scrollY - topOffset) + (topOffset - window.scrollY)) + "px"; // way too long, only thing that worked
     document.getElementsByClassName("white")[i].style.boxShadow = "-2vh " + ((scrollAmount*(window.scrollY))/5) + "px 10px rgba(0, 0, 0, 0.7)";
     document.getElementsByClassName("white")[i].style.textShadow = "-1vh " + ((scrollAmount*(window.scrollY))/15) + "px 5px rgba(0, 0, 0, 0.3)";
     //alert(document.getElementsByClassName("white")[i].style.boxShadow);
   }
 };
 scroll();
-//setInterval(function(){ alert("-1vh " + (((scrollAmount*window.scrollY)/15) - topOffset*0.3) + "px 5px rgba(0, 0, 0, 0.3)"); }, 3000);
+//setInterval(function(){ alert(document.getElementsByClassName("white")[0].offsetHeight); }, 3000);
