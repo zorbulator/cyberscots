@@ -49,8 +49,7 @@ h2 {
 p {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 3vh;
-  color: #EE0000;
-  background-color: rgba(100, 100, 100, 0.7);
+  color: black;
 }
 
 .parallax {
@@ -128,7 +127,9 @@ li a:hover {
     margin: auto;
 }*/
 
-
+img {
+  width: 75%;
+}
 .content {
   height: 50%;
   width: 50%;
@@ -152,12 +153,16 @@ li a:hover {
   display: inline-block;
   z-index: 10;
   transition: 0.05s;
-  text-shadow: -1vh 0px 5px rgba(0,0,0,0.3);
+  text-shadow: -1vh 0px 10px rgba(0, 0, 0, 0.2);
   max-width: 25%;
   position: fixed;
   height: auto;
 }
-
+.big {
+  max-width: 75%;
+  width: 75%;
+  height: 50%;
+}
 
 
 

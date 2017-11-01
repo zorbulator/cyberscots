@@ -26,7 +26,7 @@ function scroll(){
     topOffset = document.getElementsByClassName("white")[i].parentElement.offsetTop; //parent div's offset from top of page
     document.getElementsByClassName("white")[i].style.top = (Math.max(scrollAmount*(window.scrollY - topOffset), -window.innerHeight/2) + (topOffset - window.scrollY)) + "px"; // way too long, only thing that worked
     document.getElementsByClassName("white")[i].style.boxShadow = "-2vh " + ((scrollAmount*(window.scrollY))/5) + "px 10px rgba(0, 0, 0, 0.7)";
-    document.getElementsByClassName("white")[i].style.textShadow = "-1vh " + ((scrollAmount*(window.scrollY))/20) + "px 5px rgba(0, 0, 0, 0.3)";
+    document.getElementsByClassName("white")[i].style.textShadow = "-1vh " + ((scrollAmount*(window.scrollY))/20) + "px 10px rgba(0, 0, 0, 0.2)";
     //alert(document.getElementsByClassName("white")[i].style.boxShadow);
   }
 };
