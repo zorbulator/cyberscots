@@ -26,8 +26,19 @@ function scroll(){
     topOffset = document.getElementsByClassName("white")[i].parentElement.offsetTop; //parent div's offset from top of page
     document.getElementsByClassName("white")[i].style.top = (Math.max(scrollAmount*(window.scrollY - topOffset), -window.innerHeight/2) + (topOffset - window.scrollY)) + "px"; // way too long, only thing that worked
     document.getElementsByClassName("white")[i].style.boxShadow = "-2vh " + ((scrollAmount*(window.scrollY))/5) + "px 10px rgba(0, 0, 0, 0.7)";
+    if (localStorage.getItem("textShadows") == "true") {
     document.getElementsByClassName("white")[i].style.textShadow = "-1vh " + ((scrollAmount*(window.scrollY))/20) + "px 10px rgba(0, 0, 0, 0.2)";
+    }else {
+      document.getElementsByClassName("white")[i].style.textShadow = "none";
+    }
     //alert(document.getElementsByClassName("white")[i].style.boxShadow);
+  }
+  for (i=0;i<document.getElementsByClassName("arrowD").length;i++) {
+    if (window.scrollY >= 100) {
+      document.getElementsByClassName("arrowD")[i].style.opacity = "0";
+    }else {
+      document.getElementsByClassName("arrowD")[i].style.opacity = "100";
+    }
   }
 };
 scroll();

@@ -3,6 +3,7 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 <link rel="shortcut icon" href="logo.png" type="image/x-icon">
 <script src="parallax.js"></script>
+<script src="modal.js"></script>
 <meta name="viewport" content="width=device-width">
 
 
@@ -20,12 +21,14 @@
   <li><a href="sponsors.html">Sponsors</a></li>
   <li><a href="about.html">About</a></li>
   <li><a href="members.html">Members</a></li>
+  <li><img class="settings" onclick="openSettings()" src="settings.png" alt="Settings"></li>
 </ul>
 </div>
 <div class="parallax" style="background: url(robotgood.png) repeat center top fixed;">
 
    <img class="white front center" id="logo" src="alphacyberscots.png"></img>
-
+  <p class="white farFront left">Testing Testing</p>
+   <p class="arrowD" onclick="window.scrollBy(0, window.innerHeight)">&darr;</p>
 </div>
 
 
@@ -34,5 +37,14 @@
 <h2>FTC Robotics</h2>
 </div>
 <div class="parallax zOver" style="background: url(ftc.gif) repeat center top fixed;"></div>
+
+<div id="settingsModal" class="modal">
+    <div class="modal-content">
+      <span onclick="closeSettings()" class="close">&times;</span>
+      <p>Text Shadows</p>
+      <input type="checkbox" id="tSSlider" class="switch_1" checked = "true" onclick="checkChange()">
+  </div>
+</div>
+
 </head>
 </html>
