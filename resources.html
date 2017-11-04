@@ -1,16 +1,22 @@
 <html>
-<link rel = "stylesheet" type = "text/css" href = "index.css"/>
-<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-<script src="parallax.js"></script>
-<meta name="viewport" content="width=device-width">
-<link rel="shortcut icon" href="logo.png" type="image/x-icon">
-<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-<script type="text/javascript" async="" src="./Smooth page scroll_files/ga.js"></script><script src="./Smooth page scroll_files/jquery-1.9.1.js"></script>
-<script src="./Smooth page scroll_files/TweenMax.min.js"></script>
-<script src="./Smooth page scroll_files/ScrollToPlugin.min.js"></script>
-<script language="Javascript" type="text/javascript" src="./Smooth page scroll_files/smoothPageScroll.js"></script>
-<title>CyberScots</title>
-<head>
+    <head>
+        <link rel = "stylesheet" type = "text/css" href = "index.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+        <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+        <script src="parallax.js"></script>
+        <script src="modal.js"></script>
+        <meta name="viewport" content="width=device-width">
+        
+        
+        <script type="text/javascript" async="" src="./Smooth page scroll_files/ga.js"></script><script src="./Smooth page scroll_files/jquery-1.9.1.js"></script>
+        <script src="./Smooth page scroll_files/TweenMax.min.js"></script>
+        <script src="./Smooth page scroll_files/ScrollToPlugin.min.js"></script>
+        <script language="Javascript" type="text/javascript" src="./Smooth page scroll_files/smoothPageScroll.js"></script>
+        <title>CyberScots</title>
+      </head>
+<body>
+    <div id="loader"></div>
+    <div id="contentDiv" style="display:none;" class="animate-bottom">
   <div class="top">
     <a href="index.html" class="title">CyberScots</a>
   <ul>
@@ -19,14 +25,15 @@
   <li><a href="sponsors.html">Sponsors</a></li>
   <li><a href="about.html">About</a></li>
   <li><a href="members.html">Members</a></li>
+  <li><img class="settings" onclick="openSettings()" src="settings.png" alt="Settings"></li>
 </ul>
 </div>
 <div class="parallax" style="background: url(robotgood.png) repeat center top fixed;">
 
       <a target="_blank" class="white farFront left hyperlink" href="https://www.firstinspires.org/robotics/ftc">FTC Website</a>
-      <a target="_blank" class="white back center hyperlink" href="https://www.youtube.com/channel/UC4m4_UmYiOZAbWCuYnXmvng">Our Bad Youtube Channel</a>
+      <a target="_blank" class="white back center hyperlink" href="https://www.youtube.com/channel/UC4m4_UmYiOZAbWCuYnXmvng">Our YouTube Channel</a>
       <a target="_blank" class="white front right hyperlink" href="mailto:piedmontcyberscots@gmail.com">Contact Us</a>
-      <p class="arrowD" onclick="window.scrollBy(0, window.innerHeight)">&darr;</p>
+      <img src="down.png" class="arrowD" onclick="window.scrollBy(0, window.innerHeight)"></img>
 </div>
 <div class="divider">
 <h2>CyberScots Calendar</h2>
@@ -34,5 +41,17 @@
 <div class="parallax" style="background: url(ftc.gif) repeat center top fixed;">
     <iframe src="https://calendar.google.com/calendar/embed?src=piedmontcyberscots%40gmail.com&ctz=America/Los_Angeles" style="border: 0" class="white front center big"frameborder="0" scrolling="no"></iframe>
 </div>
-</head>
+<div id="settingsModal" class="modal">
+    <div class="modal-content">
+        <span onclick="closeSettings()" class="close">&times;</span>
+        <input type="checkbox" id="tSSlider" class="switch_1" checked = "true" onclick="checkChange()">
+        <label for="tSSlider">Text Shadows</label>
+        <input type="checkbox" id="sSlider" class="switch_1" checked = "true" onclick="checkChange()">
+        <label for="sSlider">Box Shadows</label>
+        <input type="checkbox" id="mSlider" class="switch_1" checked = "true" onclick="checkChange()">
+        <label for="mSlider">Movement</label>
+    </div>
+</div>
+</div>
+</body>
 </html>

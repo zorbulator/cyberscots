@@ -24,10 +24,18 @@ function scroll(){
       scrollAmount = 0.2;
     }
     topOffset = document.getElementsByClassName("white")[i].parentElement.offsetTop; //parent div's offset from top of page
-    document.getElementsByClassName("white")[i].style.top = (Math.max(scrollAmount*(window.scrollY - topOffset), -window.innerHeight/2) + (topOffset - window.scrollY)) + "px"; // way too long, only thing that worked
-    document.getElementsByClassName("white")[i].style.boxShadow = "-2vh " + ((scrollAmount*(window.scrollY))/5) + "px 10px rgba(0, 0, 0, 0.7)";
+    if (localStorage.getItem("movement") == "true") {
+      document.getElementsByClassName("white")[i].style.top = (Math.max(scrollAmount*(window.scrollY - topOffset), -window.innerHeight/2) + (topOffset - window.scrollY)) + "px"; // way too long, only thing that worked
+    }else {
+      document.getElementsByClassName("white")[i].style.top = (-window.scrollY + topOffset) + 'px';
+    }
+      if (localStorage.getItem("shadows") == "true") {
+      document.getElementsByClassName("white")[i].style.boxShadow = "1vh " + (((scrollAmount*(window.scrollY))/5) + 10) + "px 10px rgba(0, 0, 0, 0.5)";
+    }else {
+      document.getElementsByClassName("white")[i].style.boxShadow = "none";
+    }
     if (localStorage.getItem("textShadows") == "true") {
-    document.getElementsByClassName("white")[i].style.textShadow = "-1vh " + ((scrollAmount*(window.scrollY))/20) + "px 10px rgba(0, 0, 0, 0.2)";
+    document.getElementsByClassName("white")[i].style.textShadow = ".5vh " + ((scrollAmount*(window.scrollY))/20) + "px 10px rgba(0, 0, 0, 0.2)";
     }else {
       document.getElementsByClassName("white")[i].style.textShadow = "none";
     }
@@ -40,6 +48,6 @@ function scroll(){
       document.getElementsByClassName("arrowD")[i].style.opacity = "100";
     }
   }
-};
+}
 scroll();
 //setInterval(function(){ alert(document.getElementsByClassName("white")[0].offsetHeight); }, 3000);
