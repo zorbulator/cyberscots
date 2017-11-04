@@ -4,8 +4,8 @@ $(function(){
 
 	var $window = $(window);		//Window object
 
-	var scrollTime = 0.5;			//Scroll time
-	var scrollDistance = 80;		//Distance. Use smaller value for shorter scroll and greater value for longer scroll
+	var scrollTime = 0.3;			//Scroll time
+	var scrollDistance = 120;		//Distance. Use smaller value for shorter scroll and greater value for longer scroll
 
 	$window.on("mousewheel DOMMouseScroll", function(event){
 
@@ -17,7 +17,7 @@ $(function(){
 
 		TweenMax.to($window, scrollTime, {
 			scrollTo : { y: finalScroll, autoKill:true },
-				ease: Power1.easeOut,	//For more easing functions see http://api.greensock.com/js/com/greensock/easing/package-detail.html
+				ease: Power0.easeNone,	//For more easing functions see http://api.greensock.com/js/com/greensock/easing/package-detail.html
 				autoKill: true,
 				overwrite: 5
 			});

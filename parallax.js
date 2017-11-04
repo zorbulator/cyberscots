@@ -11,6 +11,9 @@ function scroll(){
     document.getElementsByClassName("parallax")[i].style.backgroundPosition = "center "+-0.5*window.scrollY+"px"; // move background half of scroll
     //alert(document.getElementsByClassName("parallax")[i].offsetTop);
   }
+
+  
+
   for (i=0;i<document.getElementsByClassName("white").length;i++) {
     if (document.getElementsByClassName("white")[i].className.split(' ')[1] == "front") { // second class determines amount of parallaxing
       scrollAmount = 0.3;
@@ -30,7 +33,7 @@ function scroll(){
       document.getElementsByClassName("white")[i].style.top = (-window.scrollY + topOffset) + 'px';
     }
       if (localStorage.getItem("shadows") == "true") {
-      document.getElementsByClassName("white")[i].style.boxShadow = "1vh " + (((scrollAmount*(window.scrollY))/5) + 10) + "px 10px rgba(0, 0, 0, 0.5)";
+      document.getElementsByClassName("white")[i].style.boxShadow = "1vh " + (((scrollAmount*(window.scrollY))/5) + 5) + "px 10px rgba(0, 0, 0, 0.5)";
     }else {
       document.getElementsByClassName("white")[i].style.boxShadow = "none";
     }
@@ -47,6 +50,15 @@ function scroll(){
     }else {
       document.getElementsByClassName("arrowD")[i].style.opacity = "100";
     }
+  }
+  if (window.scrollY == 0) {
+    document.getElementsByTagName("UL")[0].style.backgroundColor = 'rgba(0,0,0,0)';
+    document.getElementsByTagName("UL")[0].style.boxShadow = 'none';
+    document.getElementsByTagName("UL")[0].style.padding = '2vh 1vh';
+  }else {
+    document.getElementsByTagName("UL")[0].style.backgroundColor = 'white';
+    document.getElementsByTagName("UL")[0].style.boxShadow = '1vh 5px 10px rgba(0, 0, 0, 0.5)';
+    document.getElementsByTagName("UL")[0].style.padding = '.5vh 1vh';
   }
 }
 scroll();

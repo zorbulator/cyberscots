@@ -1,6 +1,16 @@
 * {
   font-family: 'Roboto', sans-serif;
   position: relative;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
 }
 
 
@@ -84,18 +94,18 @@ p {
 
 ul {
     list-style-type: none;
-    margin-top: 2vh;
+    margin-top: 0vh;
     margin-bottom: 0%;
-    padding: 1vh 1vh;
+    padding: 2vh 1vh;
     overflow: hidden;
-    background-color: white;/*rgba(40,40,40,0.4)*/
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    background-color: none;
+    /*border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;*/
     z-index: 1;
     transition: 0.5s;
-    box-shadow: 1vh 10px 10px rgba(0, 0, 0, 0.5);
+    /*box-shadow: 1vh 10px 10px rgba(0, 0, 0, 0.5);
     float: left;
-    width: auto;
+    width: auto;*/
 }
 
 li {
@@ -159,8 +169,8 @@ img {
   margin-top: 10%;
 }
 #logo{
-  width: 64vh;
-  height: 28vh;
+  width: 100%;
+  height: auto;
 }
 
 .white {
