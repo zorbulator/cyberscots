@@ -103,6 +103,7 @@ ul {
     border-bottom-right-radius: 5px;*/
     z-index: 1;
     transition: 0.5s;
+    width: 100%;
     /*box-shadow: 1vh 10px 10px rgba(0, 0, 0, 0.5);
     float: left;
     width: auto;*/
@@ -119,12 +120,32 @@ li a {
     display: block;
     color: #d11717;
     text-align: center;
-    padding: 2vh 2vh;
+    padding: 3vh 2vh;
     text-decoration: none;
     font-size: 4vh;
     transition: 0.2s;
     z-index: 1;
     border-radius: 4px;
+    margin-top: 0vh;
+}
+
+li a.indexLink {
+  padding: 1vh 1vh;
+  margin-right: 1vh;
+  margin-top: -.5vh;
+}
+
+li img {
+  display: block;
+  color: #d11717;
+  text-align: center;
+  padding: 1vh 1vh;
+  transition: 0.2s;
+  z-index: 1;
+  border-radius: 4px;
+  height: 8vh;
+  width: auto;
+  margin-top: -1vh;
 }
 
 li a:hover {
@@ -134,13 +155,16 @@ li a:hover {
     box-shadow:         inset 0 0 10px #000000;
 }
 
+li a.active {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 .settings {
+  position: fixed;
   height: 4.5vh;
   width: 4.5vh;
-  margin-left: 2vh;
+  right: 2vh;
   display: block;
-  text-align: center;
-  text-decoration: none;
   transition: 0.2s;
   z-index: 1;
   padding: 2vh 2vh;
@@ -182,7 +206,7 @@ img {
   box-shadow: -2vh 10px 10px rgba(0, 0, 0, 0.7);
   display: inline-block;
   z-index: 10;
-  transition: 0.05s;
+  transition: 0.05s linear;
   text-shadow: -1vh 0px 10px rgba(0, 0, 0, 0.2);
   max-width: 25%;
   position: fixed;
