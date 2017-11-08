@@ -17,7 +17,7 @@ $(function(){
 
 		TweenMax.to($window, scrollTime, {
 			scrollTo : { y: finalScroll, autoKill:true },
-				ease: Power0.easeNone,	//For more easing functions see http://api.greensock.com/js/com/greensock/easing/package-detail.html
+				ease: Power1.easeOut,	//For more easing functions see http://api.greensock.com/js/com/greensock/easing/package-detail.html
 				autoKill: true,
 				overwrite: 5
 			});
