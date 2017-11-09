@@ -56,9 +56,9 @@ function scroll(){
     document.getElementsByTagName("UL")[0].style.boxShadow = 'none';
     document.getElementsByTagName("UL")[0].style.padding = '2vh 1vh';
   }else {
-    document.getElementsByTagName("UL")[0].style.backgroundColor = 'white';
-    document.getElementsByTagName("UL")[0].style.boxShadow = '1vh 5px 10px rgba(0, 0, 0, 0.5)';
-    document.getElementsByTagName("UL")[0].style.padding = '1vh 1vh';
+    //document.getElementsByTagName("UL")[0].style.backgroundColor = 'white';
+    //document.getElementsByTagName("UL")[0].style.boxShadow = '1vh 5px 10px rgba(0, 0, 0, 0.5)';
+    //document.getElementsByTagName("UL")[0].style.padding = '1vh 1vh';
   }
 }
 scroll();
