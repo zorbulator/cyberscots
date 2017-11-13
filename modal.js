@@ -43,5 +43,6 @@ window.onload = function() {
         document.getElementById("loader").style.display = "none";
         document.getElementById("contentDiv").style.display = "block";
         scroll();
+        showSlides(slideIndex);
      }, 100);
 }
