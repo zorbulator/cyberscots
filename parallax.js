@@ -22,15 +22,17 @@ function scroll(){
     }else if (document.getElementsByClassName("white")[i].className.split(' ')[1] == "back") {
       scrollAmount = -0.2;
     }else if (document.getElementsByClassName("white")[i].className.split(' ')[1] == "test") {
-      scrollAmount = 1;
+      scrollAmount = 0;
     }else {
       scrollAmount = 0.2;
     }
     topOffset = document.getElementsByClassName("white")[i].parentElement.offsetTop; //parent div's offset from top of page
-    if (localStorage.getItem("movement") == "true") {
+    if (localStorage.getItem("movement") == "true" && scrollAmount != 0) {
       document.getElementsByClassName("white")[i].style.top = (Math.max(scrollAmount*(window.scrollY - topOffset), -window.innerHeight/2) + (topOffset - window.scrollY)) + "px"; // way too long, only thing that worked
-    }else {
+    }else if (scrollAmount != 0) {
       document.getElementsByClassName("white")[i].style.top = (-window.scrollY + topOffset) + 'px';
+    }else {
+      document.getElementsByClassName("white")[i].style.top = '0';
     }
       if (localStorage.getItem("shadows") == "true") {
       document.getElementsByClassName("white")[i].style.boxShadow = "1vh " + (((scrollAmount*(window.scrollY))/5) + 5) + "px 10px rgba(0, 0, 0, 0.5)";
