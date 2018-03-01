@@ -23,7 +23,7 @@ function checkChange() {
 
 function load() {
     if (localStorage.getItem("textShadows") === null) {
-        localStorage.setItem("textShadows", 'true');
+        localStorage.setItem("textShadows", 'false');
     }
     if (localStorage.getItem("shadows") === null) {
         localStorage.setItem("shadows", 'true');
@@ -43,6 +43,12 @@ window.onload = function() {
         document.getElementById("loader").style.display = "none";
         document.getElementById("contentDiv").style.display = "block";
         scroll();
-        showSlides(slideIndex);
+        try{
+            currentSlide(1);
+        }
+        catch(err) {
+            console.log('Cannot change slides, probably not on gallery page');
+        }
+        
      }, 100);
 }

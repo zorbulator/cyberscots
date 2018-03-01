@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width">
         
         
-        <script type="text/javascript" async="" src="./Smooth page scroll_files/ga.js"></script><script src="./Smooth page scroll_files/jquery-1.9.1.js"></script>
+        <script type="text/javascript" async="" src="./Smooth page scroll_files/ga.js"></script>
+        <script src="jquery-3.2.1.js"></script>
         <script src="./Smooth page scroll_files/TweenMax.min.js"></script>
         <script src="./Smooth page scroll_files/ScrollToPlugin.min.js"></script>
         <script language="Javascript" type="text/javascript" src="./Smooth page scroll_files/smoothPageScroll.js"></script>
@@ -16,6 +17,7 @@
       </head>
 <body>
     <div id="loader"></div>
+    <div id="warning-message"><h1>This website is only viewable in landscape mode. <br><br> If you are viewing on a mobile device, please rotate it. <br><br> If your device <em>is</em> in landscape, please contact the Cyberscots about this bug.</h1></div>
     <div id="contentDiv" style="display:none;" class="animate-bottom">
   <div class="top">
     <a href="index.html" class="title">CyberScots</a>
@@ -27,32 +29,32 @@
       <li><a href="competition.html">Competition</a></li>
       <li><a href="gallery.html">Gallery</a></li>
       <li><a class="active" href="contact.html">Contact Us</a></li>
-    
   </ul>
   </img>
   <img class="settings" onclick="openSettings()" src="settings.png" alt="Settings">
 </div>
 <div class="parallax" style="background: url(robotgood.png) repeat center top fixed;">
 
-      <p class="white front center">You can contact us at piedmontcyberscots@gmail.com, or use this link: <br><a class="hyperlink" href="mailto:piedmontcyberscots@gmail.com">Contact Us</a></p>
+      <p class="white front center" style="max-width: 50%">You can contact us at piedmontcyberscots@gmail.com, or use this link: <br><a class="hyperlink" href="mailto:piedmontcyberscots@gmail.com">Contact Us</a></p>
       
-      <img src="down.png" class="arrowD" onclick="window.scrollBy(0, window.innerHeight)"></img>
+      <!--img src="down.png" class="arrowD" onclick="window.scrollBy(0, window.innerHeight)"></img-->
 </div>
-<div class="divider">
+<!--div class="divider">
 <h2>Contact</h2>
 </div>
 <div class="parallax" style="background: url(ftc.gif) repeat center top fixed;">
     
-</div>
+</div-->
 <div id="settingsModal" class="modal">
     <div class="modal-content">
         <span onclick="closeSettings()" class="close">&times;</span>
-        <input type="checkbox" id="tSSlider" class="switch_1" checked = "true" onclick="checkChange()">
-        <label for="tSSlider">Text Shadows</label>
-        <input type="checkbox" id="sSlider" class="switch_1" checked = "true" onclick="checkChange()">
-        <label for="sSlider">Box Shadows</label>
-        <input type="checkbox" id="mSlider" class="switch_1" checked = "true" onclick="checkChange()">
-        <label for="mSlider">Movement</label>
+        <br>
+        <div class="settingsItem"><input type="checkbox" id="tSSlider" class="switch_1" checked = "true" onclick="checkChange()">
+        <label for="tSSlider">Text Shadows</label></div>
+        <div class="settingsItem"><input type="checkbox" id="sSlider" class="switch_1" checked = "true" onclick="checkChange()">
+        <label for="sSlider">Box Shadows</label></div>
+        <div class="settingsItem"><input type="checkbox" id="mSlider" class="switch_1" checked = "true" onclick="checkChange()">
+        <label for="mSlider">Movement</label></div>
     </div>
 </div>
 </div>

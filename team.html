@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width">
         
         
-        <script type="text/javascript" async="" src="./Smooth page scroll_files/ga.js"></script><script src="./Smooth page scroll_files/jquery-1.9.1.js"></script>
+        <script type="text/javascript" async="" src="./Smooth page scroll_files/ga.js"></script>
+        <script src="jquery-3.2.1.js"></script>
         <script src="./Smooth page scroll_files/TweenMax.min.js"></script>
         <script src="./Smooth page scroll_files/ScrollToPlugin.min.js"></script>
         <script language="Javascript" type="text/javascript" src="./Smooth page scroll_files/smoothPageScroll.js"></script>
@@ -16,6 +17,8 @@
       </head>
 <body>
     <div id="loader"></div>
+    <div id="warning-message"><h1>This website is only viewable in landscape mode. <br><br> If you are viewing on a mobile device, please rotate it. <br><br> If your device <em>is</em> in landscape, please contact the Cyberscots about this bug.</h1></div>
+
     <div id="contentDiv" style="display:none;" class="animate-bottom">
   <div class="top">
     <a href="index.html" class="title">CyberScots</a>
@@ -36,22 +39,24 @@
     <p class="white back center">The CyberScots are a robotics team from Piedmont, CA that participates in the FIRST Tech Challenge. We are building a robot to compete in the tournament later this year. Our team is separated into a hardware team and a software team. The hardware team builds the robot and the software team writes code to help it interact with its environment.</p>
 
   <img class="white front right" src="ftc.gif"></img>
-  <img src="down.png" class="arrowD" onclick="window.scrollBy(0, window.innerHeight)"></img>
+  <!--img src="down.png" class="arrowD" onclick="window.scrollBy(0, window.innerHeight)"></img-->
 </div>
-<div class="divider">
+<!--div class="divider">
 <h2>FTC Robotics</h2>
 </div>
 <div class="parallax zOver" style="background: url(robotgood.png) repeat center top fixed;">
-</div>
+</div-->
 <div id="settingsModal" class="modal">
-  <div class="modal-content">
-    <span onclick="closeSettings()" class="close">&times;</span>
-    <input type="checkbox" id="tSSlider" class="switch_1" checked = "true" onclick="checkChange()">
-    <label for="tSSlider">Text Shadows</label>
-    <input type="checkbox" id="sSlider" class="switch_1" checked = "true" onclick="checkChange()">
-    <label for="sSlider">Box Shadows</label>
-    <input type="checkbox" id="mSlider" class="switch_1" checked = "true" onclick="checkChange()">
-    <label for="mSlider">Movement</label>
+    <div class="modal-content">
+        <span onclick="closeSettings()" class="close">&times;</span>
+        <br>
+        <div class="settingsItem"><input type="checkbox" id="tSSlider" class="switch_1" checked = "true" onclick="checkChange()">
+        <label for="tSSlider">Text Shadows</label></div>
+        <div class="settingsItem"><input type="checkbox" id="sSlider" class="switch_1" checked = "true" onclick="checkChange()">
+        <label for="sSlider">Box Shadows</label></div>
+        <div class="settingsItem"><input type="checkbox" id="mSlider" class="switch_1" checked = "true" onclick="checkChange()">
+        <label for="mSlider">Movement</label></div>
+    </div>
 </div>
 </div>
 </div>

@@ -5,7 +5,7 @@ for (i=0;i<document.getElementsByClassName("white").length;i++) {
   document.getElementsByClassName("white")[i].style.marginTop = window.innerHeight*(0.3) + "px"; // 30% from top
 }
 //document.getElementsByClassName('parallax')[1].style.zIndex = "10";
-window.onscroll = function() {scroll()};
+window.addEventListener('scroll',scroll, { passive: true });
 function scroll(){
   for (i=0;i<document.getElementsByClassName("parallax").length;i++) {
     document.getElementsByClassName("parallax")[i].style.backgroundPosition = "center "+-0.5*window.scrollY+"px"; // move background half of scroll
@@ -52,15 +52,6 @@ function scroll(){
     }else {
       document.getElementsByClassName("arrowD")[i].style.opacity = "100";
     }
-  }
-  if (window.scrollY == 0) {
-    document.getElementsByTagName("UL")[0].style.backgroundColor = 'rgba(0,0,0,0)';
-    document.getElementsByTagName("UL")[0].style.boxShadow = 'none';
-    document.getElementsByTagName("UL")[0].style.padding = '2vh 1vh';
-  }else {
-    //document.getElementsByTagName("UL")[0].style.backgroundColor = 'white';
-    //document.getElementsByTagName("UL")[0].style.boxShadow = '1vh 5px 10px rgba(0, 0, 0, 0.5)';
-    //document.getElementsByTagName("UL")[0].style.padding = '1vh 1vh';
   }
 }
 scroll();
